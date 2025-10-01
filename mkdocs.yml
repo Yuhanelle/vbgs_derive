@@ -1,0 +1,75 @@
+site_name: VBGS-SLAM — Math Derivations
+site_description: All mathematical derivations, updates, and proofs for VBGS-SLAM
+site_url: https://<your-username>.github.io/vbgs-slam
+repo_url: https://github.com/<your-username>/vbgs-slam
+repo_name: vbgs-slam
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - navigation.top
+    - content.code.copy
+    - content.action.edit
+    - toc.integrate
+    - header.autohide
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - Home: index.md
+  - Derivations:
+    - Generative model: derivations/generative-model.md
+    - Variational inference (ELBO): derivations/variational-inference.md
+    - E/M-step & pose update: derivations/e-m-step.md
+    - Mixture updates & pruning: derivations/mixture-updates.md
+    - Pose optimization & Jacobians: derivations/pose-optim.md
+  - API (optional):
+    - Python package reference: api/index.md
+  - References: references.md
+
+plugins:
+  - search
+  - bibtex:
+      bib_file: docs/references.bib
+      csl_file: null
+      cite_inline: true
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            show_signature: true
+            show_source: false
+            heading_level: 2
+  - mkdocs-jupyter:
+      execute: false           # set true if you want CI to execute notebooks
+      include_source: true
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/mathjax-config.js
+
+extra_css: []
