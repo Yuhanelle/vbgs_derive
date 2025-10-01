@@ -36,7 +36,7 @@ plugins:
   - search
   - bibtex:
       bib_file: docs/references.bib
-      enable_cite_inline: true
+      enable_inline_citations: true
       csl_file: https://raw.githubusercontent.com/citation-style-language/styles/master/ieee.csl
   - mkdocs-jupyter:
       execute: false
