@@ -8,4 +8,4 @@ This site (separate from the codebase) hosts the math for **Variational Bayesian
 - Birth/split/prune rules with Delta–Mixture coupling
 - Practical notes matching our conventions (x forward, y left)
 
-👉 Code lives here: **[vbgs-slam](https://github.com/<your-username>/vbgs-slam)**.
+👉 Code lives here: **[vbgs-slam](https://github.com/Yuhanelle/vbgs-slam)**.
