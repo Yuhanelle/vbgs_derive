@@ -1,8 +1,8 @@
 site_name: VBGS-SLAM — Math Derivations
-site_description: All mathematical derivations, updates, and proofs for VBGS-SLAM
-site_url: https://<your-username>.github.io/vbgs-slam
-repo_url: https://github.com/<your-username>/vbgs-slam
-repo_name: vbgs-slam
+site_description: Full mathematical derivations for VBGS-SLAM
+site_url: https://Yuhanelle.github.io/vbgs-derive
+repo_url: https://github.com/Yuhanelle/vbgs-derive
+repo_name: vbgs-derive
 
 theme:
   name: material
@@ -11,7 +11,7 @@ theme:
     - navigation.instant
     - navigation.top
     - content.code.copy
-    - content.action.edit
+    - content.action.edit       # shows “Edit this page” linking to *this repo*
     - toc.integrate
     - header.autohide
   palette:
@@ -29,16 +29,16 @@ nav:
     - E/M-step & pose update: derivations/e-m-step.md
     - Mixture updates & pruning: derivations/mixture-updates.md
     - Pose optimization & Jacobians: derivations/pose-optim.md
-  - API (optional):
-    - Python package reference: api/index.md
   - References: references.md
+  - Code (vbgs-slam): https://github.com/Yuhanelle/vbgs-slam
 
 plugins:
   - search
   - bibtex:
       bib_file: docs/references.bib
-      csl_file: null
       cite_inline: true
+  - mkdocs-jupyter:
+      execute: false
   - mkdocstrings:
       default_handler: python
       handlers:
@@ -48,9 +48,6 @@ plugins:
             show_signature: true
             show_source: false
             heading_level: 2
-  - mkdocs-jupyter:
-      execute: false           # set true if you want CI to execute notebooks
-      include_source: true
 
 markdown_extensions:
   - admonition
@@ -62,7 +59,6 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.inlinehilite
   - pymdownx.superfences
-  - pymdownx.snippets
   - pymdownx.tabbed:
       alternate_style: true
   - toc:
@@ -71,5 +67,3 @@ markdown_extensions:
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - javascripts/mathjax-config.js
-
-extra_css: []

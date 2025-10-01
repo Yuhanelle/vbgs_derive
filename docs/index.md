@@ -1,11 +1,11 @@
 # VBGS-SLAM: Mathematical Derivations
 
-This site collects the full derivations for our **Variational Bayesian Gaussian Splatting SLAM** pipeline:
+This site (separate from the codebase) hosts the math for **Variational Bayesian Gaussian Splatting SLAM**.
+
 - Generative model over spatial + color components
-- Pose and Lie-algebra modeling
-- Variational updates (ELBO), E-step responsibilities, and M-step closed forms
-- Mixture birth/split/prune rules aligned with Delta–Mixture coupling
+- Pose model on SE(3) with Lie-algebra linearization
+- ELBO, responsibilities, and closed-form updates
+- Birth/split/prune rules with Delta–Mixture coupling
+- Practical notes matching our conventions (x forward, y left)
 
-> **TL;DR.** We model spatial components under an unknown SE(3) transform via a Lie-algebra Gaussian and treat color via fixed-covariance Delta components. The variational family couples pose and mixture updates for stable SLAM with streaming data.
-
-See: [Generative model](derivations/generative-model.md) → [ELBO & VI](derivations/variational-inference.md).
+👉 Code lives here: **[vbgs-slam](https://github.com/<your-username>/vbgs-slam)**.
